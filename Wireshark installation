@@ -1,0 +1,44 @@
+Steps to install *Wireshark* 
+🖥️ *For Windows:*
+
+1. *Go to* the official Wireshark website: [wireshark.org](https://www.wireshark.org)
+2. Click on *“Download”* and choose *Windows Installer (64-bit or 32-bit)*.
+3. Run the downloaded `.exe` file.
+4. Follow the installer instructions:
+   - Choose components (default is fine).
+   - Allow installation of *Npcap* (required for packet capture).
+5. Complete the installation and launch Wireshark.
+
+---
+
+💻 *For Linux (Ubuntu/Debian):*
+
+```bash
+sudo apt update
+sudo apt install wireshark
+```
+
+- When asked "Should non-superusers be able to capture packets?", select *Yes*.
+- Then run:  
+```bash
+sudo usermod -aG wireshark USER
+“`
+- Reboot or log out and log in again.
+
+—
+
+🍏 *For macOS:*
+
+1. Install *Homebrew* if not already:
+   “`bash
+   /bin/bash -c "(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   ```
+2. Then run:
+   ```bash
+   brew install --cask wireshark
+   ```
+3. Grant permissions if asked for packet capture.
+
+---
+
+Let me know your device (e.g., Android, Windows 11, etc.), and I’ll give steps for that too!
