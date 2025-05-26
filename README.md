@@ -43,7 +43,6 @@ nmap -sS 192.168.254.0/24
 - Wireshark SYN scan filter
 
 ## 📁 Files in Repo
-- `ok.pcapng` - Packet capture of scan
 - `screenshots/` - Terminal and Wireshark views
 - `README.md` - Project explanation
 
