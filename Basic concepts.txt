@@ -1,0 +1,33 @@
+Here are some *basic and important terms in Wireshark* you should know while analyzing network traffic:
+
+---
+
+✅ *Key Wireshark Terms:*
+
+1. *Packet* – A single unit of data captured from the network.
+
+2. *Frame* – The complete data link layer packet, including headers.
+
+3. *Protocol* – The rules for communication (e.g., TCP, UDP, HTTP, DNS, ARP).
+
+4. *Source & Destination* – IP addresses or MACs showing who sent and who received the packet.
+
+5. *Port* – Logical endpoints (e.g., port 80 for HTTP, 443 for HTTPS).
+
+6. *Stream* – A continuous connection (like a full TCP conversation).
+
+7. *Filter* – Used to narrow down results (e.g., `http`, `ip.addr == 192.168.1.1`).
+
+8. *Info Column* – A quick summary of what the packet is doing.
+
+9. *Capture Interface* – The network interface Wireshark uses to listen to traffic.
+
+10. *Time* – Timestamp showing when each packet was captured.
+
+11. *Payload* – The actual data content inside the packet.
+
+12. *Flags* – TCP control bits (like SYN, ACK, FIN) used to manage connections.
+
+13. *Length* – Size of the packet in bytes.
+
+14. *Hex View* – Shows the raw data in hexadecimal form.
