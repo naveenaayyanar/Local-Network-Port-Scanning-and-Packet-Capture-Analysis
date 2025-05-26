@@ -1,0 +1,86 @@
+Here’s how you can **install Nmap** both:
+
+* **Directly on a Linux system**
+* **Inside a Docker container**
+
+---
+
+## **1. Install Nmap on Linux**
+
+### For **Debian/Ubuntu-based systems**:
+
+```bash
+sudo apt update
+sudo apt install nmap -y
+```
+
+### For **RHEL/CentOS/Fedora**:
+
+```bash
+# RHEL/CentOS
+sudo yum install nmap -y
+
+# Fedora
+sudo dnf install nmap -y
+```
+
+### For **Arch Linux**:
+
+```bash
+sudo pacman -S nmap
+```
+
+### Verify installation:
+
+```bash
+nmap --version
+```
+
+---
+
+## **2. Install Nmap in Docker**
+
+### **Step-by-step instructions**:
+
+#### **Step 1: Create a Dockerfile**
+
+Create a file named `Dockerfile` (no extension):
+
+```Dockerfile
+# Use Ubuntu as the base image
+FROM ubuntu:latest
+
+# Install Nmap
+RUN apt-get update && \
+    apt-get install -y nmap && \
+    apt-get clean
+
+# Set default command
+CMD ["nmap", "--version"]
+```
+
+#### **Step 2: Build the Docker Image**
+
+```bash
+docker build -t nmap-image .
+```
+
+#### **Step 3: Run the Docker Container**
+
+```bash
+docker run --rm nmap-image
+```
+
+#### **Optional: Run a scan using Nmap inside Docker**
+
+For example, scanning `127.0.0.1` (host network required):
+
+```bash
+docker run --rm --net=host nmap-image nmap -sV 127.0.0.1
+```
+
+> `--net=host` is necessary for Nmap to properly access your local network (Linux-only).
+
+---
+
+Let me know if you want a prebuilt image or want to include Python with it.
